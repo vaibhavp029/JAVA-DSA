@@ -103,3 +103,91 @@ Correction:
 Finding the element by index is O(1), but maintaining contiguous memory requires shifting all subsequent elements.
 Therefore:
 O(1) + O(n) = O(n)
+
+--------------------------------------------------
+
+# Mistake 8 - Confusing addresses with values
+
+What I Thought:
+During insertion and deletion, the addresses of array elements change.
+
+Correction:
+Memory addresses are fixed locations.
+The values stored in those locations are shifted to maintain contiguous storage.
+
+--------------------------------------------------
+
+# Mistake 9 - Thinking of index as position
+
+What I Thought:
+arr[5] means the fifth position.
+
+Correction:
+The index represents the offset from the base address.
+arr[5] is the sixth element but has an offset of 5 from the beginning.
+
+--------------------------------------------------
+
+# Mistake 10 - Why arrays are stored contiguously
+
+What I Thought:
+Contiguous memory mainly helps in searching.
+
+Correction:
+The primary purpose is direct address calculation.
+Searching by value is still O(n).
+Contiguous memory enables:
+Address = Base Address + (Index × Size)
+which makes indexing O(1).
+
+---------------------------------------------------
+
+# Mistake 11 - Using <= instead of <
+
+What I Thought:
+The loop should run while i <= arr.length.
+
+Correction:
+arr.length is the number of elements, not the last index.
+The last valid index is arr.length - 1.
+Using <= accesses arr[arr.length], causing ArrayIndexOutOfBoundsException.
+
+---------------------------------------------------
+
+# Mistake 12 - Incrementing loop variable manually inside a for loop
+
+What I Thought:
+I should write i++ inside the else block.
+
+Correction:
+A for loop already increments the loop variable after every iteration.
+Incrementing it again causes elements to be skipped.
+
+--------------------------------------------------
+
+# Mistake 13 - Thinking smaller memory always means better design
+
+What I Thought:
+A boolean is always better than an int because it uses less memory.
+
+Correction:
+Choose the data type based on the problem's requirement.
+
+- Use boolean when only existence (true/false) is needed.
+- Use int when the position (index) is needed.
+
+Correctness and fulfilling requirements come before micro-optimizing memory.
+
+-------------------------------------------------
+
+# Mistake 14 - Changing a method's responsibility
+
+What I Thought:
+I can modify indexOf() to print all indices and still keep the same method.
+
+Correction:
+A method should have one clear responsibility.
+
+If the requirement changes significantly, create a new method instead of changing the meaning of an existing one.
+
+Good API design is as important as correct logic.
