@@ -194,3 +194,25 @@ contains()
 countOccurrences()
 
 printAllIndices()
+
+---------------------------------------------------
+
+# Learning 19
+
+Many array problems use the same traversal pattern.
+
+Only the comparison condition changes.
+
+Examples:
+
+==  → Search
+
+>   → Largest Element
+
+<   → Smallest Element
+
++=  → Sum
+
+count++ → Count Occurrences
+
+--------------------------------------------------
