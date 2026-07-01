@@ -1,0 +1,11 @@
+Step 1: Start
+
+Step 2: Set max = first element in array.
+
+Step 3: Compare each succeeding element with max.
+If we find any element bigger than max, replace max with that value.
+Repeat till the last valid index.
+
+Step 4: Print largest element.
+
+Step 5: Exit
